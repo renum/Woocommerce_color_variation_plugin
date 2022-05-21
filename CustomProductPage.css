@@ -1,0 +1,164 @@
+
+.var-input-container{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+}
+
+.var-input{
+
+    display:flex;
+    /*justify-content: space-between;*/
+    flex-direction: row;
+    margin:1rem;
+    box-sizing:border-box;
+    height:2rem !important;
+}
+
+
+.var-input p {
+    padding:0.25rem;
+    text-align: center;
+    height:100% !important;
+    width:50%;
+    min-width:7rem;
+    box-sizing:border-box;
+    mix-blend-mode: difference;
+    color:white;
+  
+}
+
+
+
+.var-qty{
+    
+    display: flex;
+    flex-direction: row;
+    height:100% !important;
+    
+}
+
+.var-qty .qty {
+    width:100% !important;
+    border:0.5px solid grey;
+  
+    padding:0.5rem;
+    text-align: center;
+    position: relative;
+    
+}
+
+.var-out-container{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    margin-bottom:2rem !important;
+}
+
+
+
+.var-out-container input.tot-qty{
+ 
+    width:4rem !important;
+    height:2rem !important;
+    border:0.5px solid grey !important;
+  
+    padding:0.5rem !important;
+    text-align: center !important;
+    margin:1rem !important;
+     
+    
+   
+    
+}
+
+/*This is to display different font color in output quantity boxes based on background color*/
+.var-out-container input::-webkit-textfield-decoration-container {
+
+    mix-blend-mode: difference;
+    color:white;
+
+}
+
+/**Hide the select for variations**/
+.woocommerce div.product form.cart .variations select{
+
+    display:none !important;
+}
+
+/*Hide quantity field for variable products*/
+
+.woocommerce-variation-add-to-cart .quantity{
+    display: none !important;
+}
+
+
+/*.woocommerce div.product form.cart .single_variation_wrap .variations_button button.single_add_to_cart_button{
+
+    display: none !important;
+}*/
+
+/*This is to display different font color in input quantity boxes based on background color*/
+.var-out-container input::-webkit-textfield-decoration-container {
+
+    mix-blend-mode: difference;
+    color:white;
+    
+}
+
+/**Hide the select for variations**/
+.woocommerce div.product form.cart .variations select{
+
+    display:none;
+}
+
+/**always show up and down arrows for number input*/
+.var-input input[type=number]::-webkit-inner-spin-button, 
+.var-input input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+   flex: 0 0 40%;
+   margin-right:-20%;
+
+}
+
+.var-input-container #text-field-container {
+
+    position: relative;
+    
+}
+
+.var-input-wrapper{
+    display: flex;
+    flex-direction: column;
+   /* border:2px solid black;*/
+    margin:1rem;
+}
+
+.stock-error{
+    color:red;
+    font-weight: bold;
+    padding:0 1rem;
+    
+}
+
+
+.var-input-container{
+    margin-top:2rem;
+}
+
+
+.woocommerce div.product form.cart a.reset_variations{
+
+    background-color:#dd3333 !important;
+    display:inline-block !important;
+    color:white !important;
+    font-weight: 700 !important;
+    vertical-align: center;
+    border-radius:3px;
+    padding:0.5em 1em;
+
+
+    
+}
+
