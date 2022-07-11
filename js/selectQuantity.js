@@ -4,9 +4,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     varOuts=document.querySelectorAll('.var-out-container > input');
     varQtys=document.querySelectorAll('.qty');
     
+
     
-
-
     varQtys.forEach((varQty)=> {
 
         varQty.addEventListener("change",()=>{
@@ -60,11 +59,11 @@ function updateQtys(varQty){
 function get_stock(varQty,varOut){
     var inpStock=parseInt(varQty.dataset.stock);
     jQuery(varQty).parent().parent().parent().find('.stock-error').remove(); //remove stock error message for this color
-    if(inpStock >= varQty.value ){
+    if(inpStock >= varQty.value && varQty.value > 0 ){
         varOut.value = varQty.value;
         enable_cart_clear_btns();
     }
-    else{
+    else if(inpStock < varQty.value){
         varOut.value = '';
         alert('Quantity can not be updated. Stock is less than selected quantity.');                           
         let Stock_Message=document.createElement("div");
@@ -74,6 +73,10 @@ function get_stock(varQty,varOut){
       
         
        
+    }
+    else if(!(varQty.value > 0)){
+        varOut.value = '';
+        
     }
     jQuery(varQty).css('cursor','');
 }
@@ -132,6 +135,8 @@ function get_stock_ajax(varQty,varOut){
 
 
 function enable_cart_clear_btns(){
+
+    console.log('updating buttons');
     if(jQuery('.reset_variations').css('visibility') =='hidden'){
         jQuery('.reset_variations').css('visibility','visible');
     
@@ -140,4 +145,15 @@ function enable_cart_clear_btns(){
     if(jQuery('.single_add_to_cart_button').hasClass('disabled')){
         jQuery('.single_add_to_cart_button').removeClass('disabled');
     }
+
+    if(jQuery('.single_add_to_cart_button').hasClass('wc-variation-selection-needed')){
+        jQuery('.single_add_to_cart_button').removeClass('wc-variation-selection-needed');
+    }
+
+    if(jQuery('.woocommerce-variation-add-to-cart').hasClass('woocommerce-variation-add-to-cart-disabled')){
+        jQuery('.woocommerce-variation-add-to-cart').removeClass('woocommerce-variation-add-to-cart-disabled');
+        jQuery('.woocommerce-variation-add-to-cart').addClass('woocommerce-variation-add-to-cart-enabled');
+    }
+
+   
 }

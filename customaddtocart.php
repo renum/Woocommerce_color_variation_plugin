@@ -44,10 +44,7 @@
        echo $result;
        
  
-        //wc()->cart->add_to_cart(225,1);
-        //echo $_REQUEST["red"];
-        //header("Location: ".$_SERVER["HTTP_REFERER"]);
-
+       
 
 
         die();

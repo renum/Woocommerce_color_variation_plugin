@@ -1,5 +1,10 @@
+
+
 jQuery(document).ready( function() {
+   
     jQuery(".single_add_to_cart_button").click( function(e) {
+        
+      
        e.preventDefault(); 
        jQuery(".single_add_to_cart_button").addClass( 'loading' );
        var inpArr={};
@@ -94,10 +99,11 @@ jQuery(document).ready( function() {
                         jQuery( '.woocommerce-error, .woocommerce-message, .woocommerce-info' ).remove();	
                         // Add new notices
                     
-                        jQuery('.woocommerce-notices-wrapper:first').prepend(response.notices);
+                        jQuery('.woocommerce-notices-wrapper:first').prepend('<div class="woocommerce-info">'+response.notices+'</div>');
                         jQuery( document.body ).trigger( 'wc_notices_refreshed' );
                         jQuery( document.body ).trigger( 'wc_fragment_refresh' );
-                        jQuery(".single_add_to_cart_button").removeClass( 'loading' );	
+                        jQuery(".single_add_to_cart_button").removeClass( 'loading' );
+                        resetQuantity();	
                         console.log(response);
                     }
                     
@@ -109,7 +115,8 @@ jQuery(document).ready( function() {
         else{
              // Remove existing notices
              jQuery( '.woocommerce-error, .woocommerce-message, .woocommerce-info' ).remove();	
-            jQuery('.woocommerce-notices-wrapper:first').prepend('No products selected');
+            jQuery('.woocommerce-notices-wrapper:first').prepend('<div class="woocommerce-error">No Variations selected</div>');
+            disableAddtoCart();
             jQuery(".single_add_to_cart_button").removeClass( 'loading' );	
 
         }

@@ -1,0 +1,123 @@
+/**Input quantity style**/
+
+
+
+.var-input-container{
+    margin-top:2rem;
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+}
+
+.var-input-wrapper{
+    display: flex;
+    flex-direction: column;
+   /* border:2px solid black;*/
+    margin:1rem;
+}
+
+.var-input{
+
+    display:flex;
+    /*justify-content: space-between;*/
+    flex-direction: row;
+    margin:1rem;
+    box-sizing:border-box;
+    height:2rem !important;
+}
+
+
+.var-input p {
+    padding:0.25rem;
+    text-align: center;
+    height:100% !important;
+    width:50%;
+    min-width:7rem;
+    box-sizing:border-box;
+    mix-blend-mode: difference;
+    color:white;
+  
+}
+
+
+
+.var-qty{
+    
+    display: flex;
+    flex-direction: row;
+    height:100% !important;
+    
+}
+
+.var-qty .qty {
+    width:100% !important;
+    border:0.5px solid grey;
+  
+    padding:0.5rem;
+    text-align: center;
+    position: relative;
+    
+}
+
+
+.var-input-container #text-field-container {
+
+    position: relative;
+    
+}
+
+
+.stock-error{
+    color:red;
+    font-weight: bold;
+    padding:0 1rem;
+    
+}
+
+/**always show up and down arrows for number input and align to right*/
+.var-input input[type=number]::-webkit-inner-spin-button, 
+.var-input input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+   flex: 0 0 40%;
+   margin-right:-20%;
+
+}
+
+
+
+
+/**Output quantity style**/
+
+.var-out-container{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    margin-bottom:2rem !important;
+}
+
+
+
+.var-out-container input.tot-qty{
+ 
+    width:4rem !important;
+    height:2rem !important;
+    border:0.5px solid grey !important;
+  
+    padding:0.5rem !important;
+    text-align: center !important;
+    margin:1rem !important;
+     
+}
+
+/*This is to display different font color in output quantity boxes based on background color*/
+.var-out-container input::-webkit-textfield-decoration-container {
+
+    mix-blend-mode: difference;
+    color:white;
+
+}
+
+
+
+

@@ -1,0 +1,61 @@
+/**admin options**/
+
+
+.colorVarAdminHeader{
+    text-align: center;
+    margin-bottom:2%;
+}
+
+.admin-option-form{
+    display:flex;   
+    flex-direction: column;
+}
+
+.labelSelect{
+    display:flex;
+    margin-bottom:2%;
+}
+
+.labelSelect > label {
+    flex: 0 0 calc(40% - 2rem);   
+}
+
+.labelSelect > label > h2{
+
+    margin:0 !important;
+}
+
+
+.labelSelect > select{
+    flex: 0 0 calc(60% - 2rem);
+}
+
+
+a.resetOptions, a.resetOptionsModal{
+    display:inline-block;
+    padding:0.5rem 1rem;
+    border-radius:5px;  
+    text-decoration: none !important;
+    background-color:red !important;
+    color:black;  
+    height:18%;
+    font-size: 1em; 
+    justify-content: center;  
+    align-items: center;
+    margin-left:2%;
+}
+
+
+.saveOptions, .saveOptionsModal{
+    display:inline-block;
+    background-color:green;
+    padding:0.5rem 1rem !important; 
+    border-radius:5px;  
+    color:black;  
+    font-size:1em;
+    box-shadow: none !important;
+    height:30%;
+    border:none !important;
+    
+     
+}
